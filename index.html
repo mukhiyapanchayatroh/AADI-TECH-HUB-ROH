@@ -467,3 +467,15 @@
 
 </body>
 </html>
+<script>
+let pages = ["home","manifesto"];
+let i = 0;
+
+setInterval(()=>{
+   i++;
+   if(i >= pages.length) i = 0;
+
+   showPage(pages[i]);
+},5000);
+</script>
+
