@@ -468,14 +468,17 @@
 </body>
 </html>
 <script>
-let pages = ["home","manifesto"];
-let i = 0;
+let scrollSpeed = 0.5;
 
-setInterval(()=>{
-   i++;
-   if(i >= pages.length) i = 0;
+function autoScroll(){
+    window.scrollBy(0, scrollSpeed);
 
-   showPage(pages[i]);
-},5000);
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        window.scrollTo(0,0);
+    }
+}
+
+setInterval(autoScroll, 30);
 </script>
+
 
